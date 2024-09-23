@@ -9,9 +9,9 @@ const employees = [
 
 //Task 2: Create a Function to Display Employee Shift Details
 
-function displayEmployeeShifts(employee) {
-    console.log(`Employee's Shift - ${employee.name}`);
-    employee.shifts.forEach(shifts => {
-        console.log(`Day of Shift - ${shift.day}, Hours of Shift - ${shift.hours}`)
+function displayEmployeeShifts(employee) { //function to display employee shifts
+    console.log(`Employee's Shift - ${employee.name}`); //output displaying employee's name assigned to the shift
+    employee.shifts.forEach(shifts => { //finding the shifts for each employee
+        console.log(`Day of Shift - ${shift.day}, Hours of Shift - ${shift.hours}`) //output displaying shift days and hours
     });
 };
