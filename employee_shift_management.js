@@ -28,3 +28,11 @@ function assignShift(employeeName, days, hours) { //function to assign shifts to
         console.log(`${employeeName} will work ${hours} on ${day}`) //output diplays when and what hours an employee is working
     };
 };
+
+//Task 4: Create a Function to Calculate Total Hours Worked
+
+function calculateTotalHours(employeeName) { //function to find total hours worked by an employee
+    const employee = employees.find(worker => worker.name === employeeName); //find employee
+    const totalHours = employee.shifts.reduce((total, shift) => total + shift.hours, 0); //find total number of hours worked
+    console.log(`${totalHours} worked by ${employeeName}`); // output displaying total number of hours worked
+};
