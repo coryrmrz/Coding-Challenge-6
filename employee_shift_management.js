@@ -36,3 +36,12 @@ function calculateTotalHours(employeeName) { //function to find total hours work
     const totalHours = employee.shifts.reduce((total, shift) => total + shift.hours, 0); //find total number of hours worked
     console.log(`${totalHours} worked by ${employeeName}`); // output displaying total number of hours worked
 };
+
+//Task 5: Create a Function to List Employees with Free Days
+
+function listAvailableEmployees(day) { //function to find available employees
+    const employeesAvailable = employees.filter(employee => !employee.shifts.some(shift => shift.day === day)); //finding employees available that day
+    if (employeesAvailable.forEach(employee => { //finding names for each employee
+        console.log(`${employeeName} is available on ${day}`); //output displaying employees available on that day
+    }));
+};
